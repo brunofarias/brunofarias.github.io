@@ -1,0 +1,531 @@
+/* ----------------------------------------------
+    Author: Bruno Farias
+    Author URL: http://www.brunofarias.com.br
+-------------------------------------------------
+    CSS ÍNDICE:
+    1. FONT FACE
+    2. RESETS
+    3. COMUNS 
+    4. HEADER
+    5. PORTFOLIO
+    6. SOBRE    
+    7. CONTATO
+    8. FOOTER  
+/* ---------------------------------------------
+   1. FONT FACE
+----------------------------------------------*/    
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('proximanova-light-webfont.eot');
+    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-light-webfont.woff') format('woff'),
+         url('proximanova-light-webfont.ttf') format('truetype'),
+         url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ---------------------------------------------
+   2.RESETS
+----------------------------------------------*/    
+*{margin: 0; padding: 0; text-align: left;border: none; 
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+}
+a{text-decoration: none;}
+ol,ul{list-style: none; display: block;}
+/* ---------------------------------------------
+   3. COMUNS
+----------------------------------------------*/ 
+.left{float: left;}
+.right{float: right;}
+.clear{clear: both;}
+.sprite{}
+.chromeframe{font-size: 2.6em; font-weight: normal; color: #109f9a;}
+
+body{
+    font-family:'Dosis', Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    border-top: 5px solid #737373;
+    background-color: #f7f7f9; 
+    background: url(../img/bg-s.png) 0 0 repeat fixed;   
+}
+h1{
+    text-indent: -5000px;  
+}
+h2{
+    font-size: 4.2em;
+    font-weight: normal;
+    color: #109F9A;
+    padding-top: 50px;
+    margin-left: -2px;
+    text-rendering: optimizeLegibility;
+}
+h3{
+    font-size: 2.6em;
+    font-weight: normal;
+    color: #109f9a;
+}
+h4{
+    font-size: 2.6em;
+    font-weight: normal;
+    color: #109f9a;
+    margin-bottom: 70px;   
+}
+img{
+    float: left;
+    width: 32px;
+    height: 40px;
+    padding-right: 15px;  
+}
+span{
+    font-size: 1.6em;
+    font-weight: normal;
+    color: #888;   
+}
+li{
+    float: left;
+}
+input{
+    clear: both;
+    font-family:'Dosis';
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #109f9a;
+}
+textarea{
+    font-family:'Dosis';
+    font-size: 1.5em;
+    line-height: 1.6em;
+    color: #109f9a;
+    padding-left: 5px;
+    margin-top: 15px;
+    width: 400px;
+    height: 100px;
+}
+form{
+    float: left;
+    width: 50%;
+}
+header{
+   width: 100%;
+}
+/* ---------------------------------------------
+   4. HEADER
+----------------------------------------------*/ 
+#topo{
+        padding-top: 25px;
+        margin: auto;
+        width: 507px;
+        height: 103px;
+    }
+    #topo ul li{
+        margin: 35px 4px 0;
+    }
+    #topo ul li a{
+        font-size: 2.2em;
+        color: #737373;
+        text-transform: uppercase;
+        padding: 7px;
+    }
+    #topo ul li a:hover{
+        color: #FFF;
+        background-color: #109F9A;  
+    }
+    #logo{
+        float: left;
+        background: url(../img/logo.png) center no-repeat;
+        width: 103px;
+        height: 103px;
+        margin: auto;
+        padding: 0 10px;
+    }
+    #menu-esq, #menu-dir{
+        float: left;
+        width: 192px;
+        height: 63px;
+    }
+    #conteudo{
+        margin-top: 70px;
+    }
+    #intro{
+        margin: 0 auto;
+        background: url(../img/info.png) no-repeat;
+        width: 507px;
+        height: 472px;
+    }
+    .grid{
+        float: left;
+        margin: 0 5px 70px 5px; 
+        width: 310px;
+        height: 213px;
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+    #portfolio-list{
+        margin-top: 30px;
+        height: 555px;
+    }
+
+/* ---------------------------------------------
+   5. PORTFOLIO
+----------------------------------------------*/ 
+#content-portfolio{ 
+    margin-top: 150px;
+    background: url(../img/bg.png) 0 0 repeat fixed;    
+}
+.coluna{
+    min-height: 1px;
+    padding: 0 6px;
+    position: relative;    
+}
+.grid{
+    float: left;
+    margin: 0 5px; 
+    width: 310px;
+    height: 213px;
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+#portfolio-list a{
+    float: left;
+    margin-bottom: 10px;
+    width: 310px;
+    height: 213px;
+    -webkit-transition: background-position 0.5s;
+    -moz-transition: background-position 0.5s;
+    -o-transition: background-position 0.5s;
+    -ms-transition: background-position 0.5s;
+    transition: background-position 0.5s;  
+}
+#portfolio-list #thumb01 a{   
+    background-image: url(../img/thumb01.png);  
+}
+#portfolio-list #thumb01 a:hover{   
+    background-position: 310px 213px;  
+}
+#portfolio-list #thumb02 a{   
+    background-image: url(../img/thumb02.png);  
+}
+#portfolio-list #thumb02 a:hover{   
+    background-position: 310px 213px;  
+}
+#portfolio-list #thumb03 a{   
+    background-image: url(../img/thumb03.png);  
+}
+#portfolio-list #thumb03 a:hover{   
+    background-position: 310px 213px;  
+}
+#portfolio-list .nome{ 
+    display: block;
+    font-size: 1.8em;
+    line-height: 1em;
+    color: #109F9A;
+    text-transform: uppercase;
+}
+#portfolio-list p{
+    width: 310px;
+    font-size: 1.4em;
+    line-height: 1em;
+    color: #808080;
+    padding-top: 5px;
+}
+#portfolio-list .caption{
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0px 3px;
+    background: #109F9A;
+    color: #fff;
+}
+/* ---------------------------------------------
+   6. SOBRE
+----------------------------------------------*/ 
+#content-sobre{
+    margin-top: 50px;
+}
+#sobre{
+    height: 700px;    
+}
+.grid-sobre{
+    float: left;
+    width: 50%;
+    position: relative;
+}
+#sobre p{
+    color: #737373;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1.8em;
+    line-height: 1.6;
+    margin-top: 15px;        
+}
+.cv{
+    color: #737373;
+    margin-top: 13px;
+    font-size: 1.4em;
+    line-height: 2.6em;
+    padding-bottom: 4px;
+    background-repeat: no-repeat;    
+    display: block;
+    font-weight: bold;
+    -webkit-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000), color 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    -moz-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000), color 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    -o-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000), color 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    -ms-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000), color 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000), color 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);       
+}
+a#curriculum {
+    width: 126px;
+    background-image: url(../img/shape.png);
+    background-position: 126px 0;
+}
+a#curriculum:hover {
+    background-position: 33px 0;
+    color: #fff;
+}
+#habilidades{
+    padding-top: 235px;
+}
+#habilidades h3{
+    padding-top: 235px;
+}
+/* ---------------------------------------------
+   6. SOBRE - skill plugin
+----------------------------------------------*/ 
+#habilidades ul li{
+    clear: both;
+    text-transform: uppercase;
+    padding: 3px 15px;
+    color: #fff;
+    font-size: 1.8em;
+    line-height: 1.6;
+    margin-top: 15px;
+    text-align: right;     
+}
+#jq{
+    background-color: #0184b5; 
+    width: 110px;
+    margin-left: 230px;   
+}
+#css{
+    background-color: #026083;
+    width: 260px;
+    margin-left: 80px;
+}
+#html{
+    background-color: #013e54;
+    width: 300px;
+    margin-left: 40px; 
+}
+#ps{
+    background-color: #02afef;
+    width: 285px;
+    margin-left: 55px;
+}
+#wp{
+    background-color: #53ccf9;
+    margin-left: 250px;
+}
+.get{
+    display: none;
+}
+#diagram {
+    float: right;
+    width: 550px;
+    height: 550px;
+    margin-top: -320px;
+}
+/* ---------------------------------------------
+   7. CONTATO
+----------------------------------------------*/ 
+#content-contato{
+    margin-top: 80px;
+    background: url(../img/bg.png) 0 0 repeat fixed; 
+}
+#contato{
+    height: 700px;    
+}
+.input {
+    padding-left: 5px;
+    margin-top: 20px;
+    width: 400px;
+    height: 25px;
+}
+#enviar{
+    cursor: pointer;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    line-height: 1em;
+    margin-top: 15px;
+    margin-left: 335px;
+    background-color: #109f9a;
+    color: #FFF;
+    width: 70px;
+    padding: 8px;
+    text-align: center;
+}
+/* ---------------------------------------------
+   7. CONTATO sociais
+----------------------------------------------*/ 
+#sociais{   
+    float: right;
+    display: block;
+    width: 50%;
+    border-top: 1px solid #109F9A;
+    border-bottom: 1px solid #109F9A;
+    height: 230px;
+    margin-top: 20px; 
+}
+#sociais li{  
+    position: relative;
+    z-index: 100;
+    top: 20px;
+    left: -60px;
+    width: 72px;
+    margin: 0 7px;
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+.email{
+    position: relative;
+    z-index: 500; 
+    top: 38px;
+    left: 92px;
+    float: left;
+    width: 31px;
+    height: 31px;      
+    background: url(../img/email.png) no-repeat;   
+}
+.fb{
+    position: relative;
+    z-index: 500; 
+    top: 38px;
+    left: 145px;
+    float: left;
+    width: 31px;
+    height: 31px;  
+    background: url(../img/fb.png) no-repeat;   
+}
+.tw{
+    position: relative;
+    z-index: 500; 
+    top: 38px;
+    left: 203px;
+    float: left;
+    width: 31px;
+    height: 31px;    
+    background: url(../img/tw.png) no-repeat;   
+}
+.gplus{
+    position: relative;
+    z-index: 500; 
+    top: 38px;
+    left: 260px;
+    float: left;
+    width: 31px;
+    height: 31px;   
+    background: url(../img/gplus.png) no-repeat;   
+}
+.cor{    
+    background-repeat: no-repeat;    
+    display: block;
+    -webkit-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    -moz-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    -o-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    -ms-transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    transition: background-position 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000);       
+}
+a[href*="gmail"]{
+    height: 72px;
+    background-image: url(../img/shape-mail.png);
+    background-position: 0 72px;      
+}
+a[href*="gmail"]:hover{
+    background-position: 0 0;   
+}
+
+a[href*="facebook"]{
+    height: 72px;
+    background-image: url(../img/shape-fb.png);
+    background-position: 0 72px;      
+}
+a[href*="facebook"]:hover{
+    background-position: 0 0;   
+}
+
+a[href*="twitter"]{
+    height: 72px;
+    background-image: url(../img/shape-tw.png);
+    background-position: 0 72px;      
+}
+a[href*="twitter"]:hover{
+    background-position: 0 0;   
+}
+
+a[href*="google"]{
+    height: 72px;
+    background-image: url(../img/shape-gplus.png);
+    background-position: 0 72px;      
+}
+a[href*="google"]:hover{
+    background-position: 0 0;   
+}
+/* ---------------------------------------------
+   7. CONTATO informações
+----------------------------------------------*/ 
+#contatos{
+    margin-top: 130px;
+    padding-left: 75px;
+}
+.ico_mail{
+    background: url(../img/ico_mail.png) no-repeat;
+    width: 35px;
+    height: 32px;
+}
+div#contatos span{
+    display: block;
+    font-size: 1.8em;
+    line-height: 1.1em;
+    color: #109f9a;
+    padding-left: 50px;
+    font-weight: bold;    
+    margin-bottom: 15px;
+    letter-spacing: 0.1em;    
+}
+.ico_cel{
+    background: url(../img/ico_cel.png) no-repeat;
+    width: 19px;
+    height: 29px;
+}
+div#contatos a{
+    font-size: 1.8em;
+    line-height: 1.6em;
+    color: #109f9a;
+    font-weight: bold;
+    padding: 3px 0px 3px 30px;
+}
+/* ---------------------------------------------
+   8. FOOTER
+----------------------------------------------*/ 
+#footer{    
+    text-align: center;
+    height: 30px;
+    padding-top: 15px;
+}
+/* ---------------------------------------------
+   9. MEDIA QUERIES
+----------------------------------------------*/ 
+@media only screen and (min-width: 480px) {
+
+.content{position: relative; height: 100%; width: 320px; margin: 0 auto;}
+}
+
+@media only screen and (min-width: 768px) {
+    .content{position: relative; height: 100%; width: 768px; margin: 0 auto;}
+    #habilidades{padding-top: 275px;}
+
+}
+@media only screen and (min-width: 1140px) {
+   
+    .content{position: relative; height: 100%; width: 960px; margin: 0 auto;}
+    #portfolio-list{margin-top: 30px; height: 500px;}
+    #habilidades{padding-top: 235px;}
+}
+
