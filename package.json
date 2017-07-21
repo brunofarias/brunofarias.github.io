@@ -1,0 +1,30 @@
+{
+  "name": "bruno",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-htmlmin": "*",
+    "gulp-less": "*",
+    "gulp-minify-css": "*",
+    "gulp-svgmin": "*",
+    "gulp-svgstore": "*",
+    "gulp-uglify": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brunofarias/brunofarias.github.io.git"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-file-include": "^1.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "quick-local-ip": "^1.0.7"
+  }
+}

@@ -1,0 +1,79 @@
+.galery {
+	.owl-carousel {
+		.owl-item {
+			img {
+				width: auto;
+				height: auto;
+				border: 1px solid #eaeaea;
+			}
+		}		
+	}
+}
+
+.model {
+	img {
+		width: 100%;
+		height: auto;
+		border: 1px solid #eaeaea;
+	}
+}
+
+.team {
+
+	.box {
+		width: 100%;
+		height: 165px;
+		margin-bottom: 30px;    
+	}
+	
+	.nav {
+		.image {
+			position: relative;
+			text-align: center;
+			margin-top: 30px;
+			img {				
+				width: 120px;
+				height: 120px;
+				margin: auto;
+				border-radius: 100%;
+				border: 6px solid #ccc;
+				-webkit-filter: grayscale(1);
+				filter: grayscale(1);
+			}
+			.caption {
+				display: inline-block;
+				width: 150px;
+				margin-top: 30px;
+				padding: 0 10px;   		
+				border: 1px solid #009688;
+				overflow: hidden;	    
+				.open(.7em);
+				line-height: 2.75em;
+				text-transform: uppercase;
+				color: #009688;
+			}
+		}
+	}	
+}
+//
+// GERAL RESPONSIVO
+//
+
+// GERAL TABLET P/ BAIXO
+@media only screen and (max-width: 1170px) {
+
+	.galery {
+		.owl-carousel {
+			.owl-item {
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}		
+		}
+	}
+}
+
+// CELULAR COM PORCENTAGEM
+@media only screen and (max-width: 767px) {}
+

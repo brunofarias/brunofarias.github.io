@@ -1,0 +1,65 @@
+// fonts
+.open(@x){font:@x 'open_sansregular', sans-serif;}
+.mbold(@x){font:@x 'montserratbold', sans-serif;}
+.mreg(@x){font:@x 'montserratregular', sans-serif;}
+
+// diretorios
+@bg:'../images/bg/';
+@misc:'../images/misc/';
+@temp:'../images/temp/';
+.bg(@x,@y){background:url('@{bg}@{x}') @y;}
+.misc(@x,@y){background:url('@{misc}@{x}') @y;}
+.temp(@x,@y){background:url('@{temp}@{x}') @y;}
+
+
+// globals
+body {
+	.open(16px);
+}
+
+h1 {
+  margin: 1em 0 0.5em 0;
+  .mbold(3em);
+  letter-spacing: -1pt;
+  color: #fff;
+}
+
+h2 {
+  margin: 0 0 1em 0;
+  .mbold(2em);
+  letter-spacing: -1pt;
+  color: #009688;
+}
+
+h3 {
+  margin-bottom: 5px;
+  .mbold(1.2em);
+  color: #009688;
+}
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
+
+section {
+  padding-top: 80px;
+}
+
+// desktop 1024
+@media (min-width: 960px) and (max-width: 1199px) {}
+
+// geral tablet p/ baixo
+@media only screen and (max-width: 959px){}
+
+// tablet 768
+@media only screen and (min-width: 768px) and (max-width: 959px){}
+
+// tablet 640
+@media only screen and (min-width: 640px) and (max-width: 767px){}
+
+// celular com porcentagem
+@media only screen and (max-width: 639px){}
+
+// celulares tela pequena
+@media only screen and (max-width: 478px){}
