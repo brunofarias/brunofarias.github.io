@@ -6,11 +6,13 @@ var gulp        = require('gulp'),
     svgstore    = require('gulp-svgstore'),
     svgmin      = require('gulp-svgmin'),
     htmlmin     = require('gulp-htmlmin'),
+    rename      = require('gulp-rename'),
     fileinclude = require('gulp-file-include'),
     myip        = require('quick-local-ip'),
     connect     = require('gulp-connect'),
     imagemin    = require('gulp-imagemin'),
-    clean       = require('gulp-clean');
+    clean       = require('gulp-clean'),
+    path        = require('path');
 
 function swallowError (error) {
 
@@ -24,23 +26,24 @@ gulp.task('images', function() {
   return gulp.src([
     'source/images/**/*.gif',
     'source/images/**/*.jpg',
-    'source/images/**/*.png'
+    'source/images/**/*.png',
+    'source/images/**/*.svg',
   ])
-  .pipe(imagemin({interlaced: true, optimizationLevel: 5, progressive: true}))
-  .pipe(gulp.dest('build/images/'))
+  .pipe(imagemin({interlaced: true, optimizationLevel: 5, progressive: true, plugins: [{removeViewBox: true}]}))
+  .pipe(gulp.dest('source/images/'))
   .pipe(connect.reload());
 });
 
 // GERAR SVG
 
 // limpando svg
-gulp.task('clean-svg', function () {
-  return gulp.src('source/images/svg/svg.svg', {read: false})
-  .pipe(clean());
-});
+// gulp.task('clean-svg', function () {
+//   return gulp.src('source/images/svg/svg.svg', {read: false})
+//   .pipe(clean());
+// });
 
 // gerando svg
-gulp.task('svg', ['clean-svg'], function () {
+gulp.task('svg', function () {
   return gulp.src('source/images/svg/**/*.svg')
   .pipe(svgmin(function (file) {
     var prefix = path.basename(file.relative, path.extname(file.relative));
@@ -54,8 +57,9 @@ gulp.task('svg', ['clean-svg'], function () {
     }
   }))
   .pipe(svgstore())
-  .pipe(gulp.dest('build/images/svg'))
+  .pipe(gulp.dest('source/images/svg'))
 });
+
 
 //File Include
 gulp.task('fileinclude', function() {
@@ -75,9 +79,13 @@ gulp.task('htmlreload',function(){
 
 // MINIFICAR HTML
 gulp.task('html', function() {
-  return gulp.src(['source/html/build/**/*.html'])
-  .pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
-  .pipe(gulp.dest('build/html/'))
+  return gulp.src(['source/html/build/**/*.html', '!source/html/build/**/*min.html'])
+  .pipe(htmlmin({collapseWhitespace: true,minifyJS: true}))
+  .pipe(rename(function (path) {
+    path.basename += ".min";
+    path.extname = ".html"
+  }))
+  .pipe(gulp.dest('source/html/build/'))
   .pipe(connect.reload());
 });
 
@@ -109,7 +117,7 @@ gulp.task('less', function() {
   .pipe(less())
   .on('error', swallowError)
   .pipe(minifyCSS())
-  .pipe(gulp.dest('build/css'))
+  .pipe(gulp.dest('source/css'))
   .pipe(connect.reload());
 });
 

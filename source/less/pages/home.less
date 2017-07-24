@@ -1,79 +1,82 @@
-.galery {
-	.owl-carousel {
-		.owl-item {
-			img {
-				width: auto;
-				height: auto;
-				border: 1px solid #eaeaea;
-			}
-		}		
-	}
-}
+.about {
+	position: relative;
+  padding-top: 50px;
+  background-color: @secundary;
 
-.model {
-	img {
-		width: 100%;
-		height: auto;
-		border: 1px solid #eaeaea;
-	}
-}
 
-.team {
+  &:before {
+  	content: '';
+  	position: absolute;
+  	top: 0;
+    right: 0;    
+  	width: 150%;
+  	height: 400px;
+  	background-color: @secundary;
+  	-webkit-transform-origin: left;
+    -moz-transform-origin: left;
+    -o-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: skewY(-3eg);
+    -moz-transform: skewY(-3eg);
+    -o-transform: skewY(3eg);
+     transform: skewY(-3deg); 
+  }
 
-	.box {
-		width: 100%;
-		height: 165px;
-		margin-bottom: 30px;    
+  &:after: '';
+  	position: absolute;
+  	top: 0;
+    left: 0;    
+  	width: 150%;
+  	height: 400px;
+  	background-color: @secundary;
+  	-webkit-transform-origin: right;
+    -moz-transform-origin: right;
+    -o-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: skewY(3eg);
+    -moz-transform: skewY(3eg);
+    -o-transform: skewY(3eg);
+     transform: skewY(3deg); 
+  }
+
+
+	.profile {
+		position: relative;
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+
 	}
 	
-	.nav {
-		.image {
-			position: relative;
-			text-align: center;
-			margin-top: 30px;
-			img {				
-				width: 120px;
-				height: 120px;
-				margin: auto;
-				border-radius: 100%;
-				border: 6px solid #ccc;
-				-webkit-filter: grayscale(1);
-				filter: grayscale(1);
-			}
-			.caption {
-				display: inline-block;
-				width: 150px;
-				margin-top: 30px;
-				padding: 0 10px;   		
-				border: 1px solid #009688;
-				overflow: hidden;	    
-				.open(.7em);
-				line-height: 2.75em;
-				text-transform: uppercase;
-				color: #009688;
-			}
-		}
-	}	
-}
-//
-// GERAL RESPONSIVO
-//
+	.text {
+		margin-bottom: 25px;
 
-// GERAL TABLET P/ BAIXO
-@media only screen and (max-width: 1170px) {
 
-	.galery {
-		.owl-carousel {
-			.owl-item {
-				img {
-					width: 100%;
-					height: auto;
-				}
-			}		
+		span {
+			display: block;
+			strong {
+				.mont(1em);
+				font-weight: 700;
+			}
 		}
 	}
+
+	&__caption {
+		display: block;
+		margin-bottom: 20px;
+		.mont(1.3em);
+		font-weight: 700;
+	}
+
 }
 
-// CELULAR COM PORCENTAGEM
-@media only screen and (max-width: 767px) {}
+// desktop 1024
+@media only screen and (max-width: 1200px) {}
 
+// celular com porcentagem
+@media only screen and (max-width: 992px) {}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {}

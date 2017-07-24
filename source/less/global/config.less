@@ -1,65 +1,65 @@
 // fonts
-.open(@x){font:@x 'open_sansregular', sans-serif;}
-.mbold(@x){font:@x 'montserratbold', sans-serif;}
-.mreg(@x){font:@x 'montserratregular', sans-serif;}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400');
+
+@font-face {
+	font-family: 'Museo 500';
+	src: url('../fonts/Museo500-Regular.eot');
+	src: url('../fonts/Museo500-Regular.eot?#iefix') format('embedded-opentype'),
+		   url('../fonts/Museo500-Regular.woff') format('woff'),
+		   url('../fonts/Museo500-Regular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo 700';
+	src: url('../fonts/Museo-700.eot');
+	src: url('../fonts/Museo-700.eot?#iefix') format('embedded-opentype'),
+		   url('../fonts/Museo-700.woff') format('woff'),
+		   url('../fonts/Museo-700.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+.open(@x){font:@x 'Open Sans', sans-serif;}
+.mont(@x){font:@x 'Montserrat', sans-serif;}
+.museo500(@x){font:@x 'Museo 500', sans-serif;}
+.museo700(@x){font:@x 'Museo 700', sans-serif;}
 
 // diretorios
 @bg:'../images/bg/';
 @misc:'../images/misc/';
-@temp:'../images/temp/';
 .bg(@x,@y){background:url('@{bg}@{x}') @y;}
 .misc(@x,@y){background:url('@{misc}@{x}') @y;}
-.temp(@x,@y){background:url('@{temp}@{x}') @y;}
 
+// colors
+
+@primary: #232227;
+@secundary: #F4D800;
 
 // globals
 body {
-	.open(16px);
-}
 
-h1 {
-  margin: 1em 0 0.5em 0;
-  .mbold(3em);
-  letter-spacing: -1pt;
-  color: #fff;
-}
+	.title {
+		margin-bottom: 20px;
+		.mont(3.75em);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
 
-h2 {
-  margin: 0 0 1em 0;
-  .mbold(2em);
-  letter-spacing: -1pt;
-  color: #009688;
-}
+	.text {
+		.open(1em);
+		line-height: 1.6em;
+	}
 
-h3 {
-  margin-bottom: 5px;
-  .mbold(1.2em);
-  color: #009688;
-}
-
-p {
-  margin: 0 0 1.5em 0;
-}
-
-
-section {
-  padding-top: 80px;
 }
 
 // desktop 1024
-@media (min-width: 960px) and (max-width: 1199px) {}
-
-// geral tablet p/ baixo
-@media only screen and (max-width: 959px){}
-
-// tablet 768
-@media only screen and (min-width: 768px) and (max-width: 959px){}
-
-// tablet 640
-@media only screen and (min-width: 640px) and (max-width: 767px){}
+@media only screen and (max-width: 1200px) {}
 
 // celular com porcentagem
-@media only screen and (max-width: 639px){}
+@media only screen and (max-width: 992px) {}
 
 // celulares tela pequena
-@media only screen and (max-width: 478px){}
+@media only screen and (max-width: 767px) {}
