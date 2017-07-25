@@ -1,76 +1,130 @@
+//	sobre mim
 .about {
 	position: relative;
-  padding-top: 50px;
-  background-color: @secundary;
-
+  min-height: 100vh;
+  padding-top: 100px;
+  background-color: @tertiary;
 
   &:before {
   	content: '';
   	position: absolute;
   	top: 0;
-    right: 0;    
+    left: 0;
   	width: 150%;
-  	height: 400px;
-  	background-color: @secundary;
-  	-webkit-transform-origin: left;
-    -moz-transform-origin: left;
-    -o-transform-origin: left;
-    transform-origin: left;
-    -webkit-transform: skewY(-3eg);
-    -moz-transform: skewY(-3eg);
-    -o-transform: skewY(3eg);
-     transform: skewY(-3deg); 
+  	height: 120px;
+  	background-color: @tertiary;
+    .origin(top left);
+    .transform(rotate(-3deg)); 
   }
 
-  &:after: '';
-  	position: absolute;
-  	top: 0;
-    left: 0;    
-  	width: 150%;
-  	height: 400px;
-  	background-color: @secundary;
-  	-webkit-transform-origin: right;
-    -moz-transform-origin: right;
-    -o-transform-origin: right;
-    transform-origin: right;
-    -webkit-transform: skewY(3eg);
-    -moz-transform: skewY(3eg);
-    -o-transform: skewY(3eg);
-     transform: skewY(3deg); 
+  &__profile {
+  	position: relative;
+   	width: 500px;
+  	height: 430px;
+  	margin-top: 15px;
+  	overflow: hidden;
+
+  	img {
+  		width: 100%;
+  		height: auto;
+  		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(100%);
+  	}
+
+  	&:before {
+  		content: '';
+  		position: absolute;
+  		top: 0;
+  		right: 0;
+  		z-index: 100;
+  		border-top: 80px solid @tertiary;
+		  border-bottom: 80px solid transparent; 
+		  border-right: 80px solid @tertiary; 
+		  border-left: 80px solid transparent;
+  	}
+
+  	&:after {
+  		content: '';
+  		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		z-index: 100;
+  		border-top: 80px solid transparent;
+		  border-bottom: 80px solid @tertiary; 
+		  border-right: 80px solid transparent; 
+		  border-left: 80px solid @tertiary;
+  	}
   }
+	
+	.title {
+		text-align: left;
+	}	
+}
 
+//	experiência
+.know {
+	min-height: 100vh;
+	padding-bottom: 100px;
+	background-color: @tertiary;
 
-	.profile {
-		position: relative;
-		
-		img {
-			width: 100%;
-			height: auto;
-		}
+	&__info {
+		display: block;
+		margin-bottom: 25px;
+	}
 
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 25px;
+		height: 25px;
+		color: @primary;
+	}
+
+	&__place {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 5px;
+		.mont(1em);
+		font-weight: 700;
+		color: @primary;
+	}
+
+	&__date {
+		display: block;
+		margin: 10px 0 20px;
+		color: @secundary;
+		font-weight: bold;
+	}
+
+	&__text {
+		font-size: .9em;
+		line-height: 1.5em;
+		color: #7f7f7f;
 	}
 	
-	.text {
-		margin-bottom: 25px;
-
-
-		span {
-			display: block;
-			strong {
-				.mont(1em);
-				font-weight: 700;
-			}
-		}
+	&__list {
+		display: inline-block;
+		vertical-align: middle;       
+    margin: 5px;
+    padding: 20px;
+    background-color: @secundary;
+    .mont(1em);
+    color: @primary; 
 	}
-
-	&__caption {
-		display: block;
-		margin-bottom: 20px;
-		.mont(1.3em);
-		font-weight: 700;
-	}
-
 }
+
+// trabalhos
+.works {
+	padding-top: 100px;
+
+	img {
+		width: 100%;
+		height: auto;
+		padding-bottom: 30px;
+	}
+}
+
+
 
 // desktop 1024
 @media only screen and (max-width: 1200px) {}

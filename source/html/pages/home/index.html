@@ -6,51 +6,163 @@
   </head>
   <body>
 
-  	<!-- introdução -->
-    @@include('source/html/pages/include/topo.html')
+    <main class="content">
 
-    <!-- sobre mim -->
-    <section class="about">
-    	<div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <figure class="profile">
-              <img src="../../../images/misc/profile.jpg" alt="Imagem contem a foto de perfil do desenvolvedor">
-            </figure>
+    	<!-- introdução -->
+      @@include('source/html/pages/include/topo.html')
+
+      <!-- sobre mim -->
+      <section class="about">
+      	<div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <figure class="about__profile">
+                <img src="../../../images/misc/profile.jpg" alt="">
+              </figure>
+            </div>
+            <div class="col-sm-6">
+
+              <h2 class="title">Sobre mim</h2>
+
+              <p class="text">              
+                Atualmente sou um desenvolvedor Front-End situado em Recife. Trabalho desde 2012 no desenvolvimento para internet me focando na construção de interfaces. Sou formado em Sistemas de Informações e realizo trabalhos de desenvolvimento web para agências digitais.
+              </p>
+
+              <p class="text">
+                No meu tempo livre procuro trabalhar em projetos paralelos para aprimorar minhas habilidades para que eu possa aplicar esses conhecimentos a projetos reais.
+              </p>
+
+              <p class="text">
+                Nestes anos de profissão trabalhei em projetos de clientes como: Sael, Aversa, Jeep, Disnove, Hyndai, Maravilha Motos, Cisper, Sport Club do Recife, Regina Festas, Sode, Ovos Tamago, Pianini entre outras. Mais detalhes no Linked in.
+              </p>
+            </div>
           </div>
-          <div class="col-sm-6 col-sm-offset-1">
-            <h2 class="title">Sobre mim</h2>
-            <p class="text">              
-              Atualmente sou um desenvolvedor Front-End situado em Recife. Trabalho desde 2012 no desenvolvimento para internet me focando na construção de interfaces. Sou formado em Sistemas de Informações e realizo trabalhos de desenvolvimento web para agências digitais.
-            </p>
+       	</div>
+      </section>
+      
+      <!-- experiência -->
+      <section class="know">
+        <div class="container">
 
-            <p class="text">
-              No meu tempo livre procuro trabalhar em projetos paralelos para aprimorar minhas habilidades para que eu possa aplicar esses conhecimentos a projetos reais.
-            </p>
+          <h2 class="title">Experiência e conhecimento</h2>
 
-            <p class="text">
-              Nestes anos de profissão trabalhei em projetos de clientes como: Sael, Aversa, Jeep, Disnove, Hyndai, Maravilha Motos, Cisper, Sport Club do Recife, Regina Festas, Sode, Ovos Tamago, Pianini entre outras. Mais detalhes no Linked in.
-            </p>
+          <div class="row">
+            <div class="col-sm-6">              
 
-            <h3 class="about__caption">Experiência</h3>
+              <span class="know__info">
+                <svg class="know__icon"><use xlink:href="../../../images/svg/svg.svg#code"></use></svg>
+                <strong class="know__place">Caju Agência Digital</strong>
+                <small class="know__date">2008 - 2010</small>
+                <p class="know__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quo quod maiores ea similique neque iure in veniam eum, ab odit commodi itaque nam cupiditate illo numquam dicta atque totam.</p>
+              </span>
 
-            <p class="text">
-              Tenho o privilégio de dizer que tive uma experiência maravilhosa.
+              <span class="know__info">
+                <svg class="know__icon"><use xlink:href="../../../images/svg/svg.svg#code"></use></svg>
+                <strong class="know__place">Casullo Agência Digital</strong>
+                <small class="know__date">2008 - 2010</small>
+                <p class="know__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quo quod maiores ea similique neque iure in veniam eum, ab odit commodi itaque nam cupiditate illo numquam dicta atque totam.</p>
+              </span>
 
-              <br><br>
+              <span class="know__info">
+                <svg class="know__icon"><use xlink:href="../../../images/svg/svg.svg#cap"></use></svg>
+                <strong class="know__place">Sistemas de Informação</strong>
+                <small class="know__date">2010</small>
+                <p class="know__text">Formado na Faculdade Joaquim Nabuco</p>
+              </span>
 
-              <span><strong>Casullo Agência Digital </strong>2008 - 2010</span>
-              <span><strong>Casullo Agência Digital </strong>2008 - 2010</span>
-              <span><strong>Casullo Agência Digital </strong>2008 - 2010</span>
-            </p>  
+              <span class="know__info">
+                <svg class="know__icon"><use xlink:href="../../../images/svg/svg.svg#cap"></use></svg>
+                <strong class="know__place">Especializa Treinamentos</strong>
+                <small class="know__date">2010</small>
+                <p class="know__text">Curso de Web Mobile Front-End Engineer</p>
+              </span>
+            </div>
 
+            <div class="col-sm-6">
 
-          </div>   
+              <ul>
+                <li class="know__list">HTML 5</li>
+                <li class="know__list">CSS 3</li>
+                <li class="know__list">Less</li>
+                <li class="know__list">Bootstrap</li>
+                <li class="know__list">jQuery</li>
+                <li class="know__list">JavaScript</li>
+                <li class="know__list">Gulp</li>                
+                <li class="know__list">Usabilidade</li>
+                <li class="know__list">Acessibilidade</li>
+                <li class="know__list">Design Responsivo</li>
+                <li class="know__list">Experiência do Usuário</li>
+                <li class="know__list">Git</li>
+                <li class="know__list">SEO</li>                  
+                <li class="know__list">Arquitetura da Informação</li>
+              </ul> 
+            </div>
+          </div>
         </div>
-    		
-    	</div>
-    </section>
-    
+      </section>
+
+      <!-- trabalhos -->
+      <section class="works">
+        <div class="container">
+
+          <h2 class="title">Últimos trabalhos</h2>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+            </div>
+            <div class="col-sm-4">
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+            </div>
+            <div class="col-sm-4">
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+            </div>           
+          </div>
+
+          <div class="row">            
+            <div class="col-sm-4">
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+            </div>            
+            <div class="col-sm-8">
+              <figure class="works__large">
+                <img src="http://via.placeholder.com/800x802" alt="">
+              </figure>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+            </div>
+            <div class="col-sm-4">
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+            </div>
+            <div class="col-sm-4">
+              <figure class="works__small">
+                <img src="http://via.placeholder.com/500x500" alt="">
+              </figure>
+            </div>           
+          </div>
+
+        </div>
+      </section>
+
+    </main>      
 
     @@include('source/html/pages/include/rodape.html')
 

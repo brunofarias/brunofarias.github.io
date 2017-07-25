@@ -15,7 +15,7 @@
 
 	&__hello {
 		position: relative;
-		.open(2em);
+		font-size: 2em;
 		font-weight: 300;
 
 		&:after {
@@ -45,14 +45,14 @@
 		}
 
 		.itens {
-			.open(.8em);
+			font-size: .8em;
 			color: @secundary;
 			text-transform: uppercase;
 
 			span {
 				display: inline-block;
 				vertical-align: top;
-				margin: 3px 0 0 5px;
+				margin: 5px 0 0 5px;
 				color: @secundary;
 			}
 			.icon {
@@ -61,15 +61,9 @@
 				width: 25px;
 				height: 25px;
 				fill: @secundary;
-
-				&.tag, &.lamp {
-					width: 23px;
-					height: 21px;
-				}
 			}
 		}
 	}
-
 	
 }
 

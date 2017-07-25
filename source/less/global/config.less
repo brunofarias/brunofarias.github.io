@@ -30,27 +30,38 @@
 // diretorios
 @bg:'../images/bg/';
 @misc:'../images/misc/';
+@svg:'../images/svg/';
 .bg(@x,@y){background:url('@{bg}@{x}') @y;}
 .misc(@x,@y){background:url('@{misc}@{x}') @y;}
+.svg(@x,@y){background:url('@{svg}@{x}') @y;}
 
 // colors
 
-@primary: #232227;
+@primary: #191919;
 @secundary: #F4D800;
+@tertiary: #ecf1f2;
 
 // globals
 body {
+	font-family: 'Open Sans', sans-serif;
+
+	.content {
+		overflow: hidden;
+	}
 
 	.title {
-		margin-bottom: 20px;
-		.mont(3.75em);
+		margin-bottom: 50px;
+		.mont(4.5vw);
 		font-weight: 700;
-		text-transform: uppercase;
+		color: @primary;
+		text-align: center;
 	}
 
 	.text {
-		.open(1em);
+		margin-bottom: 25px;
+		font-size: 1em;
 		line-height: 1.6em;
+		color: @primary;
 	}
 
 }
