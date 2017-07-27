@@ -1,0 +1,139 @@
+//	sobre mim
+.about {
+	position: relative;
+  min-height: 100vh;
+  padding-top: 100px;
+  background-color: @tertiary;
+
+  &:before {
+  	content: '';
+  	position: absolute;
+  	top: 0;
+    left: 0;
+  	width: 150%;
+  	height: 120px;
+  	background-color: @tertiary;
+    .origin(top left);
+    .transform(rotate(-3deg)); 
+  }
+
+  &__profile {
+  	position: relative;
+   	width: 500px;
+  	height: 430px;
+  	margin-top: 15px;
+  	overflow: hidden;
+
+  	img {
+  		width: 100%;
+  		height: auto;
+  		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    	filter: grayscale(100%);
+  	}
+
+  	&:before {
+  		content: '';
+  		position: absolute;
+  		top: 0;
+  		right: 0;
+  		z-index: 100;
+  		border-top: 80px solid @tertiary;
+		  border-bottom: 80px solid transparent; 
+		  border-right: 80px solid @tertiary; 
+		  border-left: 80px solid transparent;
+  	}
+
+  	&:after {
+  		content: '';
+  		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		z-index: 100;
+  		border-top: 80px solid transparent;
+		  border-bottom: 80px solid @tertiary; 
+		  border-right: 80px solid transparent; 
+		  border-left: 80px solid @tertiary;
+  	}
+  }
+	
+	.title {
+		text-align: left;
+	}	
+}
+
+//	experiência
+.know {
+	min-height: 100vh;
+	padding-bottom: 100px;
+	background-color: @tertiary;
+
+	&__info {
+		display: block;
+		margin-bottom: 25px;
+	}
+
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 25px;
+		height: 25px;
+		color: @primary;
+	}
+
+	&__place {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 5px;
+		.mont(1em);
+		font-weight: 700;
+		color: @primary;
+	}
+
+	&__date {
+		display: block;
+		margin: 10px 0 20px;
+		color: @secundary;
+		font-weight: bold;
+	}
+
+	&__text {
+		font-size: .9em;
+		line-height: 1.5em;
+		color: #7f7f7f;
+	}
+	
+	&__list {
+		display: inline-block;
+		vertical-align: middle;       
+    margin: 5px;
+    padding: 20px;
+    background-color: @secundary;
+    .mont(1em);
+    color: @primary; 
+	}
+}
+
+// trabalhos
+.works {
+	padding-top: 100px;
+
+	.col-sm-3, .col-sm-6 {
+		padding: 5px;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {}

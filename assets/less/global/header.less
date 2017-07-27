@@ -1,0 +1,79 @@
+.header {
+	width: 100%;
+  height: 100vh;
+  color: #fff; 
+  .bg('low.jpg', 0 0 no-repeat);   
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.heading {
+	.flex;
+	.flex-align(center);
+	width: 100%;
+	height: ~"calc(100vh)";
+
+	&__hello {
+		position: relative;
+		font-size: 2em;
+		font-weight: 300;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 15px;
+			right: 0;
+			width: 80px;
+			border-bottom: 4px solid @secundary;
+		}
+	}
+
+	&__title {
+		.mont(5vw);
+		line-height: 5vw;
+		font-weight: 700;
+	}
+
+	&__nav {
+		width: 100%;
+		margin: 50px 0 0 5px;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+
+		.itens {
+			font-size: .8em;
+			color: @secundary;
+			text-transform: uppercase;
+
+			span {
+				display: inline-block;
+				vertical-align: top;
+				margin: 5px 0 0 5px;
+				color: @secundary;
+			}
+			.icon {
+				display: inline-block;
+				vertical-align: top;
+				width: 25px;
+				height: 25px;
+				fill: @secundary;
+			}
+		}
+	}
+	
+}
+
+
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {}

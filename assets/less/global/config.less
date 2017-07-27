@@ -1,0 +1,76 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400');
+
+@font-face {
+	font-family: 'Museo 500';
+	src: url('../fonts/Museo500-Regular.eot');
+	src: url('../fonts/Museo500-Regular.eot?#iefix') format('embedded-opentype'),
+		   url('../fonts/Museo500-Regular.woff') format('woff'),
+		   url('../fonts/Museo500-Regular.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo 700';
+	src: url('../fonts/Museo-700.eot');
+	src: url('../fonts/Museo-700.eot?#iefix') format('embedded-opentype'),
+		   url('../fonts/Museo-700.woff') format('woff'),
+		   url('../fonts/Museo-700.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+.open(@x){font:@x 'Open Sans', sans-serif;}
+.mont(@x){font:@x 'Montserrat', sans-serif;}
+.museo500(@x){font:@x 'Museo 500', sans-serif;}
+.museo700(@x){font:@x 'Museo 700', sans-serif;}
+
+// diretorios
+@bg:'../images/bg/';
+@misc:'../images/misc/';
+@svg:'../images/svg/';
+.bg(@x,@y){background:url('@{bg}@{x}') @y;}
+.misc(@x,@y){background:url('@{misc}@{x}') @y;}
+.svg(@x,@y){background:url('@{svg}@{x}') @y;}
+
+// colors
+
+@primary: #191919;
+@secundary: #F4D800;
+@tertiary: #ecf1f2;
+
+// globals
+body {
+	font-family: 'Open Sans', sans-serif;
+
+	.content {
+		overflow: hidden;
+	}
+
+	.title {
+		margin-bottom: 50px;
+		.mont(4.5vw);
+		font-weight: 700;
+		color: @primary;
+		text-align: center;
+	}
+
+	.text {
+		margin-bottom: 25px;
+		font-size: 1em;
+		line-height: 1.6em;
+		color: @primary;
+	}
+
+}
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {}

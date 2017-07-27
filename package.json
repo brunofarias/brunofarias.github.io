@@ -1,5 +1,5 @@
 {
-  "name": "bruno",
+  "name": "caju-bootstrap",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -9,24 +9,26 @@
     "gulp-htmlmin": "*",
     "gulp-less": "*",
     "gulp-minify-css": "*",
+    "gulp-rename": "*",
     "gulp-svgmin": "*",
     "gulp-svgstore": "*",
-    "gulp-rename": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "path": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:brunofarias/brunofarias.github.io.git"
+    "url": "git+ssh://git@bitbucket.org/agenciacaju/caju-bootstrap.git"
   },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/agenciacaju/caju-bootstrap#readme",
   "devDependencies": {
     "gulp-clean": "^0.3.2",
     "gulp-connect": "^5.0.0",
     "gulp-file-include": "^1.0.0",
-    "gulp-imagemin": "^3.3.0",
-    "path": "^0.12.7",
     "quick-local-ip": "^1.0.7"
   }
 }
