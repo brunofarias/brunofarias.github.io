@@ -3,7 +3,7 @@
   height: 100vh;
   color: #fff; 
   .bg('low.jpg', 0 0 no-repeat);   
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -15,6 +15,7 @@
 
 	&__hello {
 		position: relative;
+		margin-bottom: 10px;	
 		font-size: 2em;
 		font-weight: 300;
 
@@ -29,14 +30,14 @@
 	}
 
 	&__title {
-		.mont(5vw);
+		.mont(6vw);
 		line-height: 5vw;
 		font-weight: 700;
 	}
 
 	&__nav {
 		width: 100%;
-		margin: 50px 0 0 5px;
+		margin-top: 50px;
 
 		li {
 			display: inline-block;

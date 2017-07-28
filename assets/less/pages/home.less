@@ -1,8 +1,7 @@
 //	sobre mim
 .about {
 	position: relative;
-  min-height: 100vh;
-  padding-top: 100px;
+  padding: 80px 0 50px;
   background-color: @tertiary;
 
   &:before {
@@ -17,11 +16,19 @@
     .transform(rotate(-3deg)); 
   }
 
+  .title {
+  	position: relative;
+  	display: inline-block;
+  	strong {
+  		font-size: 7.8vw; 
+  	}
+  }
+
   &__profile {
   	position: relative;
-   	width: 500px;
-  	height: 430px;
-  	margin-top: 15px;
+   	width: 350px;
+  	height: 330px;
+  	margin-top: 30px;
   	overflow: hidden;
 
   	img {
@@ -39,7 +46,7 @@
   		z-index: 100;
   		border-top: 80px solid @tertiary;
 		  border-bottom: 80px solid transparent; 
-		  border-right: 80px solid @tertiary; 
+		  border-right: 80px solid @secundary; 
 		  border-left: 80px solid transparent;
   	}
 
@@ -50,22 +57,33 @@
   		left: 0;
   		z-index: 100;
   		border-top: 80px solid transparent;
-		  border-bottom: 80px solid @tertiary; 
+		  border-bottom: 80px solid @secundary; 
 		  border-right: 80px solid transparent; 
 		  border-left: 80px solid @tertiary;
   	}
   }
-	
-	.title {
-		text-align: left;
-	}	
+
 }
 
 //	experiência
 .know {
-	min-height: 100vh;
-	padding-bottom: 100px;
-	background-color: @tertiary;
+	padding: 50px 0;
+	.bg('pattern.png', #020204 left bottom no-repeat);  
+	background-size: cover;
+
+	.title {
+		font-size: 9vw;
+		text-align: center;
+		color: #fff;
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 25px;
+			font-size: 32px;
+			text-transform: uppercase;
+			text-align: left;
+		}
+	}
 
 	&__info {
 		display: block;
@@ -77,7 +95,7 @@
 		vertical-align: middle;
 		width: 25px;
 		height: 25px;
-		color: @primary;
+		fill: #fff;
 	}
 
 	&__place {
@@ -86,7 +104,7 @@
 		margin-left: 5px;
 		.mont(1em);
 		font-weight: 700;
-		color: @primary;
+		color: #fff;
 	}
 
 	&__date {
@@ -117,9 +135,38 @@
 .works {
 	padding-top: 100px;
 
-	.col-sm-3, .col-sm-6 {
-		padding: 5px;
+	.col-sm-6 {
+		padding: 0 10px;
 	}
+
+	.works__itens {
+		position: relative;
+
+		&-image {
+			margin-bottom: 10px;
+		}
+
+		&-caption {
+			position: absolute;
+			bottom: 25px;
+			left: 5px;
+			padding: 5px 10px;
+			background-color: @secundary;
+			.mont(1em);
+			font-weight: 700;
+			color: @primary;
+			text-transform: uppercase;
+
+
+		}
+
+	}
+
+	
+
+
+	
+
 
 	img {
 		width: 100%;
