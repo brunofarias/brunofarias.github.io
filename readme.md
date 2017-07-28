@@ -1,6 +1,5 @@
 ### Repositório ###
 
-Portfólio pessoal Bruno Farias Desenvolvedor Front-End situado em Recife. Aqui consta informações sobre lugares onde já trabalhei e um resumo das minhas qualificações
+Portfólio pessoal Bruno Farias Desenvolvedor Front-End situado em Recife. Um resumo informações sobre lugares onde já trabalhei e minhas qualificações
 
-* Versão 2.0
 
