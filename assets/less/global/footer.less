@@ -1,3 +1,49 @@
+.footer {
+	.flex;
+	.flex-align(center);
+	.flex-justify(center);
+	width: 100%;
+  min-height: 100vh;
+	background-color: @secundary;
+	color: @primary;		
+
+	.title {
+		text-align: center;
+	}
+}
+
+.foot {		
+	&__caption {
+		display: block;
+		font-size: 1.2em;
+		text-align: center;
+	}
+
+	&__link {
+		display: table;
+		margin: 10px auto;
+		.mont(2em);
+		font-weight: 700;
+		text-align: center;
+		color: @primary;
+	}
+}
+
+.social {
+	text-align: center;
+
+	&__itens {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 20px 10px;
+	}
+	&__icon {
+		width: 25px;
+		height: 25px;
+		fill: @primary;
+	}
+}
+	
 // desktop 1024
 @media only screen and (max-width: 1200px) {}
 

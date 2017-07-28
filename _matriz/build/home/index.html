@@ -13,53 +13,49 @@
   </head>
   <body>
 
-    <main class="content">
-
-    	<!-- introdução -->
-      <!--[if lte IE 9]><div class="alert-browser"><div class="center"><div class="txt"><strong>Seu navegador está desatualizado.</strong>Para uma melhor visualização do site atualize-o ou escolha outro navegador.</div><a href="http://outdatedbrowser.com/pt-br" target="_blank">Clique aqui</a></div></div><![endif]-->
+    <!-- introdução -->
+    <!--[if lte IE 9]><div class="alert-browser"><div class="center"><div class="txt"><strong>Seu navegador está desatualizado.</strong>Para uma melhor visualização do site atualize-o ou escolha outro navegador.</div><a href="http://outdatedbrowser.com/pt-br" target="_blank">Clique aqui</a></div></div><![endif]-->
 
 <header class="header">
 	
 	<div class="container">
 
 		<div class="heading">
+			<p class="heading__hello">Olá! Eu sou Bruno Farias</p>
+			<h1 class="heading__title">Front-End Developer</h1>		
 
-			<div class="heading__intro">
-				<p class="heading__hello">Olá! Eu sou Bruno Farias</p>
-				<h1 class="heading__title">Front-End Developer</h1>		
+			<nav class="heading__nav">
+				<ul>
+					<li>
+						<a href="" class="itens">					
+							<span>Sobre mim</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class="itens">					
+							<span>Conhecimentos</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class="itens">					
+							<span>últimos trabalhos</span>
+						</a>
+					</li>						
+					<li>
+						<a href="" class="itens">					
+							<span>Contato</span>
+						</a>
+					</li>				
+				</ul>
+			</nav>
 
-				<nav class="heading__nav">
-					<ul>
-						<li>
-							<a href="" class="itens">					
-								<span>Sobre mim</span>
-							</a>
-						</li>
-						<li>
-							<a href="" class="itens">					
-								<span>Conhecimentos</span>
-							</a>
-						</li>
-						<li>
-							<a href="" class="itens">					
-								<span>últimos trabalhos</span>
-							</a>
-						</li>						
-						<li>
-							<a href="" class="itens">					
-								<span>Contato</span>
-							</a>
-						</li>				
-					</ul>
-				</nav>
-
-			</div>	
-			
-		</div>
+		</div>	
 
 	</div>
 	
 </header>
+
+    <main class="content">    	
 
       <!-- sobre mim -->
       <section class="about">
@@ -67,7 +63,7 @@
           <div class="row">
 
             <div class="col-sm-10 col-sm-offset-1">
-              <h2 class="title">Quem? Como? e <br><strong>Porque?</strong></h2>
+              <h2 class="title">Quem? Como? e <br><strong>Por que?</strong></h2>
 
               <div class="col-sm-6">              
                 <figure class="about__profile">
@@ -132,7 +128,7 @@
 
             <div class="col-sm-6">
 
-              <ul>
+              <ul class="know__row">
                 <li class="know__list">HTML 5</li>
                 <li class="know__list">CSS 3</li>
                 <li class="know__list">Less</li>
@@ -163,43 +159,47 @@
 
             <ul class="works__itens col-sm-10 col-sm-offset-1">
 
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
+              <li class="works__list col-sm-6">
+                <a href="http://www.sael.com.br/" target="_blank">
+                <figure class="works__image">
+                  <img src="../../../assets/images/misc/thumb01.jpg" alt="">
                   <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
+                    <strong class="works__caption">Sael</strong>
                    </figcaption>
                 </figure>
               </li>
 
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
+              <li class="works__list col-sm-6">
+                <a href="http://www.ovostamago.com.br/" target="_blank">
+                  <figure class="works__image">
+                    <img src="../../../assets/images/misc/thumb02.jpg" alt="">
+                    <figcaption>
+                      <strong class="works__caption">Ovos Tamago</strong>
+                     </figcaption>
+                  </figure>
+                </a>                
+              </li>  
+
+              <li class="works__list col-sm-6">
+                <a href="http://www.sael.com.br/" target="_blank">
+                <figure class="works__image">
+                  <img src="../../../assets/images/misc/thumb01.jpg" alt="">
                   <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
+                    <strong class="works__caption">Sael</strong>
                    </figcaption>
                 </figure>
               </li>
 
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
-                  <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
-                   </figcaption>
-                </figure>
-              </li>
-
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
-                  <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
-                   </figcaption>
-                </figure>
-              </li>
-
-              
+              <li class="works__list col-sm-6">
+                <a href="http://www.ovostamago.com.br/" target="_blank">
+                  <figure class="works__image">
+                    <img src="../../../assets/images/misc/thumb02.jpg" alt="">
+                    <figcaption>
+                      <strong class="works__caption">Ovos Tamago</strong>
+                     </figcaption>
+                  </figure>
+                </a>                
+              </li>            
 
             </ul>
                
@@ -207,12 +207,40 @@
         </div>
       </section>
 
-    </main>      
+    </main>
 
-    <footer>
-	<div class="container">
+    <!-- contato -->
+    <footer class="footer">
+
+	<div class="foot">
+
+		<h2 class="title">Contato</h2>
+
+		<span class="foot__caption">Ligue para</span>
+		<a class="foot__link" href="tel:+5581988414738">81 98841.4738</a>
+		<span class="foot__caption">ou envie-me um e-mail para</span>
+		<a class="foot__link" href="mailto:begfarias@gmail.com">begfarias@gmail.com</a>
+
+		<ul class="social">
+			<li class="social__itens">
+				<a href="https://github.com/brunofarias" target="_blank">
+					<svg class="social__icon"><use xlink:href="../../../assets/images/svg/svg.svg#git"></use></svg>
+				</a>				
+			</li>
+			<li class="social__itens">
+				<a href="https://www.linkedin.com/in/brunofarias82/" target="_blank">
+					<svg class="social__icon"><use xlink:href="../../../assets/images/svg/svg.svg#in"></use></svg>
+				</a>				
+			</li>
+			<li class="social__itens">
+				<a href="https://www.facebook.com/brunofarias82" target="_blank">
+					<svg class="social__icon"><use xlink:href="../../../assets/images/svg/svg.svg#face"></use></svg>
+				</a>				
+			</li>
+		</ul>
+	
+	</div>
 		
-	</div>	
 </footer>
 
 

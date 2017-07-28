@@ -6,10 +6,10 @@
   </head>
   <body>
 
-    <main class="content">
+    <!-- introdução -->
+    @@include('_matriz/html/include/topo.html')
 
-    	<!-- introdução -->
-      @@include('_matriz/html/include/topo.html')
+    <main class="content">    	
 
       <!-- sobre mim -->
       <section class="about">
@@ -17,7 +17,7 @@
           <div class="row">
 
             <div class="col-sm-10 col-sm-offset-1">
-              <h2 class="title">Quem? Como? e <br><strong>Porque?</strong></h2>
+              <h2 class="title">Quem? Como? e <br><strong>Por que?</strong></h2>
 
               <div class="col-sm-6">              
                 <figure class="about__profile">
@@ -82,7 +82,7 @@
 
             <div class="col-sm-6">
 
-              <ul>
+              <ul class="know__row">
                 <li class="know__list">HTML 5</li>
                 <li class="know__list">CSS 3</li>
                 <li class="know__list">Less</li>
@@ -113,43 +113,47 @@
 
             <ul class="works__itens col-sm-10 col-sm-offset-1">
 
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
+              <li class="works__list col-sm-6">
+                <a href="http://www.sael.com.br/" target="_blank">
+                <figure class="works__image">
+                  <img src="../../../assets/images/misc/thumb01.jpg" alt="">
                   <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
+                    <strong class="works__caption">Sael</strong>
                    </figcaption>
                 </figure>
               </li>
 
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
+              <li class="works__list col-sm-6">
+                <a href="http://www.ovostamago.com.br/" target="_blank">
+                  <figure class="works__image">
+                    <img src="../../../assets/images/misc/thumb02.jpg" alt="">
+                    <figcaption>
+                      <strong class="works__caption">Ovos Tamago</strong>
+                     </figcaption>
+                  </figure>
+                </a>                
+              </li>  
+
+              <li class="works__list col-sm-6">
+                <a href="http://www.sael.com.br/" target="_blank">
+                <figure class="works__image">
+                  <img src="../../../assets/images/misc/thumb01.jpg" alt="">
                   <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
+                    <strong class="works__caption">Sael</strong>
                    </figcaption>
                 </figure>
               </li>
 
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
-                  <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
-                   </figcaption>
-                </figure>
-              </li>
-
-              <li class="works__itens-list col-sm-6">
-                <figure class="works__itens-image">
-                  <img src="../../assets/images/misc/thumb01.jpg" alt="">
-                  <figcaption>
-                    <strong class="works__itens-caption">Sael</strong>
-                   </figcaption>
-                </figure>
-              </li>
-
-              
+              <li class="works__list col-sm-6">
+                <a href="http://www.ovostamago.com.br/" target="_blank">
+                  <figure class="works__image">
+                    <img src="../../../assets/images/misc/thumb02.jpg" alt="">
+                    <figcaption>
+                      <strong class="works__caption">Ovos Tamago</strong>
+                     </figcaption>
+                  </figure>
+                </a>                
+              </li>            
 
             </ul>
                
@@ -157,8 +161,9 @@
         </div>
       </section>
 
-    </main>      
+    </main>
 
+    <!-- contato -->
     @@include('_matriz/html/include/rodape.html')
 
   </body>

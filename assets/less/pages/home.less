@@ -1,26 +1,15 @@
 //	sobre mim
 .about {
 	position: relative;
-  padding: 80px 0 50px;
-  background-color: @tertiary;
-
-  &:before {
-  	content: '';
-  	position: absolute;
-  	top: 0;
-    left: 0;
-  	width: 150%;
-  	height: 120px;
-  	background-color: @tertiary;
-    .origin(top left);
-    .transform(rotate(-3deg)); 
-  }
+	min-height: 100vh;
+  padding: 50px 0;
+  background-color: @tertiary;  
 
   .title {
   	position: relative;
   	display: inline-block;
   	strong {
-  		font-size: 7.8vw; 
+  		font-size: 7.5vw; 
   	}
   }
 
@@ -28,7 +17,7 @@
   	position: relative;
    	width: 350px;
   	height: 330px;
-  	margin-top: 30px;
+  	margin-top: 25px;
   	overflow: hidden;
 
   	img {
@@ -62,11 +51,11 @@
 		  border-left: 80px solid @tertiary;
   	}
   }
-
 }
 
 //	experiência
 .know {
+	min-height: 100vh;
 	padding: 50px 0;
 	.bg('pattern.png', #020204 left bottom no-repeat);  
 	background-size: cover;
@@ -117,7 +106,7 @@
 	&__text {
 		font-size: .9em;
 		line-height: 1.5em;
-		color: #7f7f7f;
+		color: @text;
 	}
 	
 	&__list {
@@ -133,7 +122,9 @@
 
 // trabalhos
 .works {
-	padding-top: 100px;
+	min-height: 100vh;
+	padding: 50px 0;
+	background-color: @tertiary;
 
 	.title {
 		text-align: center;
@@ -143,42 +134,54 @@
 		padding: 0 10px;
 	}
 
-	.works__itens {
+	&__itens {
 		position: relative;
-
-		&-image {
-			margin-bottom: 10px;
-		}
-
-		&-caption {
-			position: absolute;
-			bottom: 25px;
-			left: 5px;
-			padding: 5px 10px;
-			background-color: @secundary;
-			.mont(1em);
-			font-weight: 700;
-			color: @primary;
-			text-transform: uppercase;
-
-
-		}
 
 	}
 
-	
+	a {
+		display: block;
+		overflow: hidden;
+	}
 
+	&__list {
+		position: relative;
+	}
 
-	
+	&__image {
+		margin-bottom: 10px;
+	}
 
+	&__caption {
+		position: absolute;
+		bottom: 12px;
+		left: 10px;
+		width: ~"calc(100% - 20px)";
+		height: 13%;
+		padding: 5px 10px;
+		
+		.mont(1em);
+		font-weight: 700;
+		color: @tertiary;
+		text-transform: uppercase;
+		.transition(.3s);
+		background-color: @primary;
+	}
 
 	img {
 		width: 100%;
 		height: auto;
+		.transition(.2s);
+	}
+	a:hover {
+		img {			
+			.transform(translate3d(0, -10%, 0));
+		}
+		.works__caption {
+			height: 30%;
+		}
 	}
 }
-
-
 
 // desktop 1024
 @media only screen and (max-width: 1200px) {}
