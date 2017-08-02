@@ -53,6 +53,13 @@
 	transition-delay: @x;
 }
 
+.cubic(@x, @p0, @p1, @p2, @p3){
+	-webkit-transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+	-moz-transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+	-o-transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+	transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+}
+
 .placeholder(@x){
 	&::-webkit-input-placeholder {color: @x;opacity: 1;}
 	&:-moz-placeholder {color: @x;opacity: 1;}

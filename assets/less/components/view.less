@@ -1,0 +1,34 @@
+.header.view {
+	
+	.heading {
+		
+		&__hello, &__title, &__nav {
+			opacity: 0;
+			visibility: hidden;
+			.cubic(1s, 0, 0, .5, 1);
+			transition-property: All;
+			.transform(translate3d(0, 200%, 0));
+		}
+
+		&__title {
+			.delay(.3s);
+		}
+
+		&__nav {
+			.delay(1s);
+		}
+		
+	}
+
+	&.scroll {
+		.heading {
+			&__hello, &__title, &__nav {
+				opacity: 1;
+				visibility: visible;
+				.transform(translate3d(0, 0, 0));			
+			}
+		}
+		
+	}
+}
+

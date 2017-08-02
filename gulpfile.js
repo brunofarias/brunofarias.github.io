@@ -72,14 +72,17 @@ gulp.task('html', function() {
 var global = [
     'assets/js/plugins/jquery.js',
     'assets/js/plugins/modernizr.js',
-    'assets/js/plugins/maskedinput.js',
-    'assets/js/plugins/placeholder.js',
-    'assets/js/plugins/svg4everybody.js'
+    'assets/js/plugins/svg4everybody.js',
+    'assets/js/plugins/masonry.js',
+    'assets/js/plugins/imagesloaded.js',
+    'assets/js/plugins/classie.js',
+    'assets/js/plugins/AnimOnScroll.js',
+    'assets/js/plugins/waypoints.js'
 ];
 
 gulp.task('scripts', function() {
     gulp.src(global)
-    .pipe(concat("plugins.min.js"))
+    .pipe(concat("plugins.js"))
     .pipe(uglify())
     .pipe(gulp.dest('./assets/js/plugins/'));
 });

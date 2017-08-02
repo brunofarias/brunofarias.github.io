@@ -1,27 +1,6 @@
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400');
 
-@font-face {
-	font-family: 'Museo 500';
-	src: url('../fonts/Museo500-Regular.eot');
-	src: url('../fonts/Museo500-Regular.eot?#iefix') format('embedded-opentype'),
-		   url('../fonts/Museo500-Regular.woff') format('woff'),
-		   url('../fonts/Museo500-Regular.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Museo 700';
-	src: url('../fonts/Museo-700.eot');
-	src: url('../fonts/Museo-700.eot?#iefix') format('embedded-opentype'),
-		   url('../fonts/Museo-700.woff') format('woff'),
-		   url('../fonts/Museo-700.ttf') format('truetype');
-	font-weight: 700;
-	font-style: normal;
-}
-
-
 .open(@x){font:@x 'Open Sans', sans-serif;}
 .mont(@x){font:@x 'Montserrat', sans-serif;}
 .museo500(@x){font:@x 'Museo 500', sans-serif;}
@@ -52,7 +31,7 @@ body {
 
 	.title {
 		margin-bottom: 50px;
-		.mont(4.5vw);
+		.mont(3.8em);
 		font-weight: 700;
 		color: @primary;
 		text-transform: uppercase;
@@ -71,7 +50,35 @@ body {
 @media only screen and (max-width: 1200px) {}
 
 // celular com porcentagem
-@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 992px) {
+
+	body {
+		
+		.title {
+			font-size: 3em;
+		}
+
+		.text {
+			font-size: .875em;
+		}
+
+	}
+
+}
 
 // celulares tela pequena
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+
+	body {
+		
+		.title {
+			font-size: 8vw;
+		}
+
+		.text {
+			font-size: .875em;
+		}
+
+	}
+
+}

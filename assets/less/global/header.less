@@ -30,7 +30,7 @@
 	}
 
 	&__title {
-		.mont(6vw);
+		.mont(5.1em);
 		line-height: 5vw;
 		font-weight: 700;
 	}
@@ -46,32 +46,89 @@
 		}
 
 		.itens {
+			position: relative;	
+			display: block;		
+			padding: 5px 0;
 			font-size: .8em;
 			color: @secundary;
 			text-transform: uppercase;
+			
+			&:before {
+			  content: '';
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+			  width: 100%;
+			  border-bottom: 2px solid @secundary;
+			  .origin(right top);
+			  .transform(scale(0, 1));
+			  .cubic(.4s, 1, 0, 0, 1);
 
-			span {
-				display: inline-block;
-				vertical-align: top;
-				margin: 5px 0 0 5px;
-				color: @secundary;
-			}
-			.icon {
-				display: inline-block;
-				vertical-align: top;
-				width: 25px;
-				height: 25px;
-				fill: @secundary;
 			}
 		}
 	}	
+}
+
+// hover 
+@media only screen and (min-width: 1200px) {
+
+	.heading {
+		
+		.itens {
+
+			&:hover {
+				&:before {
+					.origin(left top);
+					.transform(scale(1, 1));			  					
+				}
+			}				
+		}
+	}
+
 }
 
 // desktop 1024
 @media only screen and (max-width: 1200px) {}
 
 // celular com porcentagem
-@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 992px) {
+
+	.heading {
+		
+		&__title {
+			font-size: 4em;
+		}
+	}
+
+}
 
 // celulares tela pequena
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+
+	.heading {
+
+		&__hello {
+			font-size: 6vw;
+
+			&:after {
+				width: 50px;
+			}
+		}
+		
+		&__title {
+			font-size: 8vw;
+		}
+
+		&__nav {
+
+			li {
+				display: block;				
+			}
+
+			.itens {
+				display: table;
+				padding: 10px 0;
+			}
+		}
+	}
+}
