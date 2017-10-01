@@ -1,0 +1,84 @@
+//flexbox
+.flex {
+	display: flex;
+	display: -webkit-flex;
+  display: -ms-flexbox;
+}
+.flex-justify(@x) {
+	-webkit-justify-content: @x;
+  -ms-flex-pack: @x;
+  justify-content: @x;
+}
+.flex-align(@x) {
+	-webkit-align-items: @x;
+	-ms-flex-align: @x;
+	-ms-grid-row-align: @x;
+	align-items: @x;
+}
+.flex-direction(@x) {
+	-webkit-flex-direction: @x;
+	-ms-flex-direction: @x;
+	flex-direction: @x;
+}
+
+//transições
+.transition(@x){
+	-webkit-transition:All @x ease-in-out;
+	-moz-transition:All @x ease-in-out;
+	-o-transition:All @x ease-in-out;
+	transition:All @x ease-in-out;
+}
+.transform(@x){
+	-webkit-transform: @x;
+	-moz-transform: @x;
+	-o-transform: @x;
+	transform: @x;
+}
+.transform3d(@x, @y, @z){
+	-webkit-transform: @x, @y, @z;
+	-moz-transform: @x, @y, @z;
+	-o-transform: @x, @y, @z;
+	transform: @x, @y, @z;
+}
+.origin(@x){
+	-webkit-transform-origin: @x;
+	-moz-transform-origin: @x;
+	-o-transform-origin: @x;
+	transform-origin: @x;
+}
+.delay(@x){
+	-webkit-transition-delay: @x;
+	-moz-transition-delay: @x;
+	-o-transition-delay: @x;
+	transition-delay: @x;
+}
+
+.cubic(@x, @p0, @p1, @p2, @p3){
+	-webkit-transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+	-moz-transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+	-o-transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+	transition: transform @x cubic-bezier(@p0, @p1, @p2, @p3);
+}
+
+.placeholder(@x){
+	&::-webkit-input-placeholder {color: @x;opacity: 1;}
+	&:-moz-placeholder {color: @x;opacity: 1;}
+	&::-moz-placeholder {color: @x;opacity: 1;}
+	&:-ms-input-placeholder {color: @x;opacity: 1;}
+}
+
+//center absolute
+.poscenter {position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;}
+
+//floats
+.afterbefore(){&:before,&:after{content:'';clear:both;display:block;}}
+.pull-right(){float: right;}
+.pull-left(){float: left;}
+
+//elements
+.hide(){display:none;visibility:hidden;}
+.show(){display:block;visibility:visible;}
+.disabled {opacity:.5;pointer-events: none;cursor: default;}
+.text-hide(){font: 0/0 a;color: transparent;text-shadow: none;background-color: transparent;border: 0;}
+.boxsizing(){box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+

@@ -1,0 +1,144 @@
+// destaque
+.featured {	
+	position: relative;
+	
+	&__heading {
+		position: relative;
+		z-index: 10;
+		display: table;		
+
+		.inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.head {
+			.rajd(60px);
+			font-weight: 700;
+			color: #fff;
+			letter-spacing: .2px;
+			line-height: 120%;
+		}
+
+		.caption {
+			position: relative;
+			display: block;
+			margin-right: 60%;
+			font-size: 24px;
+			color: #fff;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 18px;
+				left: -30px;
+				width: 20px;
+				border-bottom: 1px solid #fff;
+			}
+		}		
+
+		.btn {
+			display: table;
+			margin-top: 10%;
+		}
+	}
+
+	&__slider {
+		position: absolute;
+		top: 0;		
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: @primary;
+			.transition(.5s);
+			.transform(translate3d(0, 0, 0));	
+		}
+
+		&:before {			
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #141416;
+		}
+
+		.image {			
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			opacity: 0;
+			.transition(.5s);
+			.transform(translate3d(-10%, 0, 0));	
+		}
+
+		&.show {
+
+			&:after {
+				.delay(1s);
+				.transform(translate3d(30px, 30px, 0));	
+			}
+
+			&:before {			
+				-webkit-animation: mask 1.5s;
+				animation: mask 1.5s;
+				-webkit-animation-iteration-count: 1;
+				animation-iteration-count: 1;
+				-webkit-animation-fill-mode: forwards;
+				animation-fill-mode: forwards;
+			}
+
+			.image {
+				opacity: 1;
+				.delay(.6s);
+				.transform(translate3d(0, 0, 0));	
+			}		
+		}
+	}
+}
+
+@media only screen and (min-width: 1366px) {
+
+	// destaque
+	.featured {			
+
+		&__heading {			
+			width: 45%;
+			height: 70vh;
+			margin-left: 10%;				
+		}
+
+		&__slider {			
+			right: 2.5%;
+			width: 69.5%;
+
+			.image {
+				height: 70vh;
+			}
+		}
+	}
+
+}
+
+// desktop 1024
+@media only screen and (max-width: 1366px) {
+
+}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {
+
+}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {
+
+}

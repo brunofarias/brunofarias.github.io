@@ -1,0 +1,54 @@
+.btn {
+	position: relative;
+	padding: 16px 22px;			
+	border: 1px solid @primary;
+	overflow: hidden;
+	span {
+		position: relative;
+		z-index: 10;
+		display: inline-block;
+		vertical-align: middle;				
+		.rajd(17px);
+		font-weight: 600;
+		color: @primary;
+		text-transform: uppercase;
+		.transition(.5s);				
+	}
+	.arrow {
+		position: relative;
+		z-index: 10;
+		display: inline-block;
+		vertical-align: middle;
+		width: 15px;
+		height: 15px;
+		margin-left: 10px;
+		fill: @primary;
+		.transition(.5s);
+		.transform(translate3d(0,0,0));
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -30px;
+		width: 0;
+		height: 100%;
+		background-color: @primary;
+		.transition(.3s);
+		.transform(skew(45deg));
+		.origin(left);
+	}
+
+	&:hover {
+		span {
+			color: #191818;
+		}
+		.arrow {
+			fill: #191818;
+			.transform(translate3d(10px,0,0));
+		}
+		&:after {
+			width: ~"calc(100% + 60px)";
+		}
+	}
+}

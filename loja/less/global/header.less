@@ -1,0 +1,103 @@
+// cabeçalho
+.header {
+	display: inline-block;
+	width: 100%;
+	margin: 50px 0;
+
+	&__logo {
+		display: inline-block;
+		vertical-align: middle;
+		width: 140px;
+		padding: 8px 0;
+		background-color: #666;
+		font-size: 20px;
+		line-height: 100%;
+		color: #eee;
+		text-align: center;
+	}
+
+	&__side {
+		float: right;
+	}
+
+	&__phone {
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: 30px;
+		margin-right: 30px;
+		.rajd(18px);
+		font-weight: 700;
+		color: #fff;
+
+		&--whats {
+			.svg('whats.svg', left center no-repeat);
+			background-size: 20px;
+			border-right: 1px solid #666;
+			padding-right: 30px;
+		}
+
+		&--call {
+			.svg('call.svg', left center no-repeat);
+			background-size: 20px;
+		}
+	}
+
+	&__share {
+		position: relative;
+		.rajd(18px);
+		font-weight: 700;
+		color: #95989A;
+		.transition(.5s);
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 20px;
+			height: 20px;
+			margin: auto;
+			.svg('share.svg', 0 0 no-repeat);
+			background-size: 100%;
+			opacity: 0;
+			.transition(.3s);
+			.transform(translate3d(-5px, 0, 0));
+		}
+
+		&:hover {
+			padding-right: 30px;
+
+			&:after {
+				opacity: 1;
+				.transform(translate3d(0, 0, 0));
+			}
+		}
+	}
+
+	.btn {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 30px;
+	}
+}
+// hover 
+@media only screen and (min-width: 1200px) {
+	
+}
+
+// desktop 1024
+@media only screen and (max-width: 1200px) {
+
+}
+
+// celular com porcentagem
+@media only screen and (max-width: 992px) {
+
+}
+
+// celulares tela pequena
+@media only screen and (max-width: 767px) {
+
+
+}
