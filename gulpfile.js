@@ -21,7 +21,6 @@ function swallowError (error) {
 }
 
 // GERAR SVG
-
 // limpando svg
 gulp.task('clean-svg', function () {
   return gulp.src('assets/images/svg/svg.svg', {read: false})

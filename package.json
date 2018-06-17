@@ -1,7 +1,7 @@
 {
   "name": "caju-bootstrap",
   "version": "1.0.0",
-  "description": "Pacote 2018",
+  "description": "",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "*",
