@@ -52,7 +52,7 @@ gulp.task("images", function() {
 gulp.task('html', function() {
   return gulp.src('assets/html/**/*.html')
   .pipe(htmlmin({collapseWhitespace: true,minifyJS: true}))
-  .pipe(gulp.dest('dist/'))
+  .pipe(gulp.dest(''))
   .pipe(browserSync.stream());
 });
 
