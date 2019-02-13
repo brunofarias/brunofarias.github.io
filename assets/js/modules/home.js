@@ -32,3 +32,6 @@ new AnimOnScroll( document.getElementById( 'grid' ), {
   viewportFactor : 0.2
 });
 
+// svg
+svg4everybody();
+
